@@ -1,0 +1,201 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../font/Roboto-Regular.ttf);
+}
+
+:root {
+    --dark--100: rgba(0, 0, 0, .1);
+    --dark--200: rgba(0, 0, 0, .2);
+    --dark--300: rgba(0, 0, 0, .3);
+    --dark--400: rgba(0, 0, 0, .4);
+    --dark--500: rgba(0, 0, 0, .5);
+    --dark--600: rgba(0, 0, 0, .6);
+    --dark--700: rgba(0, 0, 0, .7);
+    --dark--800: rgba(0, 0, 0, .8);
+    --dark--900: rgba(0, 0, 0, .9);
+    --dark: rgba(0, 0, 0, 1);
+    --white--100: rgba(255, 255, 255, .1);
+    --white--200: rgba(255, 255, 255, .2);
+    --white--300: rgba(255, 255, 255, .3);
+    --white--400: rgba(255, 255, 255, .4);
+    --white--500: rgba(255, 255, 255, .5);
+    --white--600: rgba(255, 255, 255, .6);
+    --white--700: rgba(255, 255, 255, .7);
+    --white--800: rgba(255, 255, 255, .8);
+    --white--900: rgba(255, 255, 255, .9);
+    --white: rgba(255, 255, 255, 1);
+    --color--001: #FF782D;
+    --color--002: #E5CFC2;
+    --color--003: #E2E2E2;
+    --color--004: #060E1F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto;
+}
+
+header {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--white--200);
+    background: transparent;
+
+    .logo {
+        
+        h1 {
+            font-size: 25px;
+            font-weight: 400;
+            color: var(--color--003);
+
+            span {
+                color: var(--color--001);
+            }
+        }
+    }
+
+    .icon-middle {
+        font-size: 20px;
+        color: var(--color--003);
+    }
+
+    button {
+        padding: 5px 10px;
+        position: relative;
+        border: none;
+        border-top: 1px solid var(--white--500);
+        border-bottom: 1px solid var(--white--500);
+        font-size: 12px;
+        text-transform: uppercase;
+        color: var(--color--003);
+        background: transparent;
+
+        &::before {
+            content: "●";
+            position: absolute;
+            left: 0;
+            bottom: 6px;
+            color: var(--color--001);
+        }
+
+        &::after {
+            content: "●";
+            position: absolute;
+            right: 0;
+            bottom: 6px;
+            color: var(--color--001);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        padding: 20px !important;
+    }
+}
+
+.hero {
+    padding: 120px 50px 50px 50px;
+    background: linear-gradient(#060e1ffa, #060e1ffa), url(../image/background.jpg) no-repeat center center;
+    background-size: cover;
+
+    .container {
+        height: 100%;
+        width: 100%;
+        gap: 50px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        
+        .text {
+            color: var(--color--003);
+            text-align: center;
+
+            h1 {
+                font-size: 35px;
+
+                span {
+                    color: var(--color--001);
+                }
+            }
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            
+            ul {
+                gap: 30px;
+                display: flex;
+                list-style: none;
+
+                li {
+
+                    a {
+                        display: flex;
+                        border-radius: 50%;
+                        font-size: 20px;
+                        color: var(--white--500);
+                        transition: .2s ease;
+
+                        &:hover {
+                            color: var(--color--003);
+                            box-shadow: 0 0 10px var(--white--100);
+                        }
+                    }
+                }
+            }
+        }
+
+        button {
+            font-size: 25px;
+            color: var(--white--500);
+            border: none;
+            outline: none;
+            background: transparent;
+            animation: animateBounce 3s infinite ease;
+
+            @keyframes animateBounce {
+                0% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(20px);
+                }
+
+                100% {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hero {
+        height: 100vh;
+        padding: 120px 20px 20px 20px !important;
+
+        .container {
+
+            .text {
+
+                h1 {
+                    font-size: 25px !important;
+                }
+            }
+        }
+    }
+}
