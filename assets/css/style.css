@@ -207,30 +207,373 @@ header button::after {
 .about .container .row {
   gap: 20px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
-.about .container .row .col {
-  width: 300px;
-  overflow: hidden;
+.about .container .row .left {
+  width: 450px;
 }
-.about .container .row .col img {
-  width: 300px;
-}
-.about .container .row .col h1 {
+.about .container .row .left h1 {
   font-size: 40px;
 }
-.about .container .row .col p {
+.about .container .row .left p:first-of-type {
   margin-top: 20px;
+}
+.about .container .row .left p {
+  margin-bottom: 5px;
+  text-align: justify;
   color: var(--dark--800);
 }
+.about .container .row .rigth {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+}
+.about .container .row .rigth .frame {
+  position: relative;
+}
+.about .container .row .rigth .frame .title {
+  padding: 0 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 35px;
+  text-align: left;
+  letter-spacing: 20px;
+  text-transform: uppercase;
+  background: var(--white);
+}
+.about .container .row .rigth .frame .title span {
+  padding: 0 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  color: var(--color--001);
+  background: var(--white);
+}
+.about .container .row .rigth .frame .age {
+  padding: 0 5px;
+  position: absolute;
+  bottom: 4px;
+  right: 0;
+  font-size: 45px;
+  text-transform: uppercase;
+  background: var(--white);
+}
+.about .container .row .rigth .frame .age span {
+  padding: 0 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  color: var(--color--001);
+  background: var(--white);
+}
+.about .container .row .rigth .frame .country {
+  padding: 0 5px;
+  position: absolute;
+  bottom: 40%;
+  left: 0;
+  font-size: 45px;
+  text-transform: uppercase;
+  background: var(--white);
+}
+.about .container .row .rigth .frame .country span {
+  padding: 0 5px;
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+  font-size: 12px;
+  color: var(--color--001);
+  background: var(--white);
+}
+.about .container .row .rigth .frame img {
+  width: 300px;
+}
 
+@media screen and (min-width: 1040px) {
+  .about .container .row .rigth {
+    justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .about .container .row {
+    flex-direction: column-reverse;
+  }
+  .about .container .row .rigth {
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 600px) {
   .about {
     padding: 20px !important;
   }
-  .about .container .row {
-    flex-direction: column-reverse;
+  .about .container .row .col {
+    width: 100%;
+  }
+  .about .container .row .col .frame {
+    width: 100%;
+  }
+  .about .container .row .col .frame img {
+    width: 100%;
+  }
+}
+.skill {
+  padding: 50px;
+  background-size: cover;
+}
+.skill .container .title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.skill .container .title h1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: var(--white);
+  font-size: 30px;
+}
+.skill .container .title h1::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 50px;
+  bottom: -10px;
+  background: var(--color--001);
+}
+.skill .container .title h1::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100px;
+  bottom: -10px;
+  background: var(--white--200);
+}
+.skill .container .row .col {
+  gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.skill .container .row .col .card {
+  position: relative;
+}
+.skill .container .row .col .card .card-body {
+  height: 150px;
+  width: 150px;
+  padding: 10px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border-radius: 5px;
+  transition: 0.2s ease;
+}
+.skill .container .row .col .card .card-body img {
+  max-height: 100px;
+  max-width: 100px;
+}
+.skill .container .row .col .card .card-body:hover {
+  transform: translate(-5px, -5px);
+}
+.skill .container .row .col .card::before {
+  content: "";
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  z-index: 1;
+  border-radius: 5px;
+  background: var(--color--001);
+}
+
+@media screen and (max-width: 600px) {
+  .skill {
+    padding: 20px !important;
+  }
+  .skill .container .row .col {
+    gap: 20px !important;
+  }
+  .skill .container .row .col .card {
+    scale: 0.9;
+  }
+}
+.contact {
+  padding: 50px;
+}
+.contact .container .title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.contact .container .title h1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: var(--dark);
+  font-size: 30px;
+}
+.contact .container .title h1::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 50px;
+  bottom: -10px;
+  background: var(--color--001);
+}
+.contact .container .title h1::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100px;
+  bottom: -10px;
+  background: var(--dark--200);
+}
+.contact .container .row .col {
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contact .container .row .col .my-contact {
+  width: 500px;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 15px var(--dark--200);
+}
+.contact .container .row .col .my-contact .card-body {
+  height: 100%;
+}
+.contact .container .row .col .my-contact .card-body .info-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.contact .container .row .col .my-contact .card-body .info-group .logo {
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 25px;
+  color: var(--color--001);
+  background: rgba(255, 118, 45, 0.4745098039);
+  transition: 0.2s ease;
+}
+.contact .container .row .col .my-contact .card-body .info-group .logo:hover {
+  color: var(--white);
+  background: var(--color--001);
+}
+.contact .container .row .col .my-contact .card-body .info-group .info {
+  width: 80%;
+}
+.contact .container .row .col .my-contact .card-body .info-group .info h1 {
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: var(--color--001);
+}
+.contact .container .row .col .my-contact .card-body .info-group .info p {
+  font-size: 14px;
+  color: var(--dark--800);
+}
+.contact .container .row .col .my-contact .card-body .maps {
+  height: 380px;
+  width: 100%;
+}
+.contact .container .row .col .my-contact .card-body .maps iframe {
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+.contact .container .row .col .form-email {
+  width: 600px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px var(--dark--200);
+}
+.contact .container .row .col .form-email .card-body form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact .container .row .col .form-email .card-body form .form-group {
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+}
+.contact .container .row .col .form-email .card-body form .form-group input {
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+  font-family: Roboto;
+  font-size: 16px;
+  border: 1px solid var(--dark--200);
+  border-radius: 5px;
+  outline: none;
+  transition: 0.2s ease;
+}
+.contact .container .row .col .form-email .card-body form .form-group input:focus {
+  border: 1px solid var(--color--001);
+}
+.contact .container .row .col .form-email .card-body form .form-group textarea {
+  width: 100%;
+  padding: 15px;
+  font-family: Roboto;
+  font-size: 16px;
+  border: 1px solid var(--dark--200);
+  border-radius: 5px;
+  outline: none;
+  transition: 0.2s ease;
+}
+.contact .container .row .col .form-email .card-body form .form-group textarea:focus {
+  border: 1px solid var(--color--001);
+}
+.contact .container .row .col .form-email .card-body form .form-group label {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  color: var(--dark--200);
+  cursor: text;
+  transition: 0.2s ease;
+}
+.contact .container .row .col .form-email .card-body form .form-group label[for=message] {
+  top: 15px;
+  bottom: auto;
+}
+.contact .container .row .col .form-email .card-body form .form-group input:focus ~ label,
+.contact .container .row .col .form-email .card-body form .form-group textarea:focus ~ label {
+  transform: translateY(-25px);
+  color: var(--color--001);
+  background: var(--white);
+  padding: 0 5px;
+}
+.contact .container .row .col .form-email .card-body form button {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 20px;
+  font-family: Roboto;
+  font-size: 14px;
+  color: var(--color--001);
+  background: var(--white);
+  border: 1px solid var(--color--001);
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.contact .container .row .col .form-email .card-body form button:hover {
+  color: var(--white);
+  background: var(--color--001);
+}
+
+@media screen and (max-width: 600px) {
+  .contact {
+    padding: 20px !important;
   }
 }/*# sourceMappingURL=style.css.map */

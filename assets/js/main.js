@@ -9,4 +9,11 @@
         }
     });
 
+    $(document).ready(function() {
+        var date = new Date().getFullYear();
+        var bd = 2004;
+
+        $('.age').append(date-bd);
+    });
+
 })()
