@@ -249,6 +249,7 @@ header button::after {
   bottom: 0;
   right: 0;
   font-size: 12px;
+  letter-spacing: 0;
   color: var(--color--001);
   background: var(--white);
 }
@@ -321,6 +322,7 @@ header button::after {
 }
 .skill {
   padding: 50px;
+  background: linear-gradient(rgba(6, 14, 31, 0.9176470588), rgba(6, 14, 31, 0.9176470588)), url(../image/background_skill.jpg) no-repeat fixed center center;
   background-size: cover;
 }
 .skill .container .title {
@@ -437,14 +439,20 @@ header button::after {
   justify-content: center;
 }
 .contact .container .row .col .my-contact {
-  width: 500px;
-  padding: 20px;
-  overflow: hidden;
+  position: relative;
   border-radius: 5px;
-  box-shadow: 0 0 15px var(--dark--200);
+  box-shadow: 0 5px 15px var(--dark--200);
 }
 .contact .container .row .col .my-contact .card-body {
   height: 100%;
+  width: 500px;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+  margin-top: 5px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: var(--white);
 }
 .contact .container .row .col .my-contact .card-body .info-group {
   margin-bottom: 20px;
@@ -462,7 +470,7 @@ header button::after {
   border-radius: 50%;
   font-size: 25px;
   color: var(--color--001);
-  background: rgba(255, 118, 45, 0.4745098039);
+  background: rgba(255, 118, 45, 0.3137254902);
   transition: 0.2s ease;
 }
 .contact .container .row .col .my-contact .card-body .info-group .logo:hover {
@@ -490,11 +498,30 @@ header button::after {
   width: 100%;
   border: none;
 }
+.contact .container .row .col .my-contact::before {
+  content: "";
+  width: 500px;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background: var(--color--001);
+  border-radius: 5px;
+}
 .contact .container .row .col .form-email {
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px var(--dark--200);
+}
+.contact .container .row .col .form-email .card-body {
+  height: 100%;
   width: 600px;
   padding: 20px;
+  position: relative;
+  z-index: 2;
+  margin-top: 5px;
+  overflow: hidden;
   border-radius: 5px;
-  box-shadow: 0 0 15px var(--dark--200);
+  background: var(--white);
 }
 .contact .container .row .col .form-email .card-body form {
   display: flex;
@@ -571,9 +598,23 @@ header button::after {
   color: var(--white);
   background: var(--color--001);
 }
+.contact .container .row .col .form-email::before {
+  content: "";
+  width: 600px;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background: var(--color--001);
+  border-radius: 5px;
+}
 
 @media screen and (max-width: 600px) {
   .contact {
     padding: 20px !important;
   }
+}
+footer {
+  padding: 20px 50px;
+  background: var(--color--004);
+  color: var(--white--800);
 }/*# sourceMappingURL=style.css.map */
