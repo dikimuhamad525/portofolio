@@ -5,213 +5,228 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portofolio</title>
+    <link rel="shortcut icon" href="assets/image/logo/scss.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/vendors/aos/aos.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
-    <header class="header">
-        <div class="logo">
-            <h1>My<span>Portofolio</span></h1>
+<body class="body">
+
+    <div class="loading">
+        <div class="infinityChrome">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
+    </div>
 
-        <ion-icon class="icon-middle" name="apps-outline"></ion-icon>
+    <main class="main-content">
+        <i class="back-to-top"><ion-icon name="chevron-up-circle-outline"></ion-icon></i>
 
-        <button>let's see</button>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <div class="text">
-                <h1>Good Design Is</h1>
-                <h1>Noticeable & Great Design</h1>
-                <h1>Is <span>Invisible.</span></span></h1>
+        <header class="header">
+            <div class="logo">
+                <h1>My<span>Portofolio</span></h1>
             </div>
-
-            <div class="social-media">
-                <ul>
-                    <li>
-                        <a href="https://web.facebook.com/diki.m.alfikri" target="_blank">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://www.instagram.com/dky_mhd/" target="_blank">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://github.com/dikimuhamad525" target="_blank">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <button>
-                <ion-icon name="chevron-down-circle-outline"></ion-icon>
-            </button>
-        </div>
-    </section>
-
-    <section class="about">
-        <div class="container">
-            <div class="title">
-                <h1>About Me</h1>
-            </div>
-
-            <div class="row">
-                <div class="col left">
-                    <h1>Hey, there👊</h1>
-                    <h1>I'm Diki Muhamad A</h1>
-
-                    <p>Halo, semuanya!! perkenalkan nama saya Diki Muhamad Alfikri, selamat datang di web portofolioku.
-                    </p>
-                    <p>Aku adalah seorang Web Developer junior yang istilahnya masih pemula dan masih belajar. Kegemaran
-                        ku terhadap dunia pemrograman di mulai pada saat aku masih sekolah SMK kelas 1. Pada saat itu
-                        aku sulit sekali untuk memahami dasar-dasar dari pemrograman di karena-kan maraknya virus
-                        Covid-19 pada waktu itu, namun disini aku tidak putus asa dan lebih memilih belajar web
-                        programing dengan tanpa bantuan guru sama sekali dan mengandalkan web/video tutorial yang ada.
-                    </p>
+    
+            <ion-icon class="icon-middle" name="apps-outline"></ion-icon>
+    
+            <button>let's see</button>
+        </header>
+    
+        <section class="hero">
+            <div class="container" data-aos="fade-up">
+                <div class="text">
+                    <h1>Good Design Is</h1>
+                    <h1>Noticeable & Great Design</h1>
+                    <h1>Is <span>Invisible.</span></span></h1>
                 </div>
-
-                <div class="col rigth">
-                    <div class="frame">
-                        <h2 class="title">diki <span>name</span></h2>
-                        <h2 class="country">ind <span>country</span></h2>
-                        <h2 class="age"><span>age</span></h2>
-                        <img src="assets/image/photo.png" alt="">
-                    </div>
+    
+                <div class="social-media">
+                    <ul>
+                        <li>
+                            <a href="https://web.facebook.com/diki.m.alfikri" target="_blank">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="https://www.instagram.com/dky_mhd/" target="_blank">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="https://github.com/dikimuhamad525" target="_blank">
+                                <ion-icon name="logo-github"></ion-icon>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
+    
+                <button>
+                    <ion-icon name="chevron-down-circle-outline"></ion-icon>
+                </button>
             </div>
-        </div>
-    </section>
+        </section>
+    
+        <section class="about">
+            <div class="container">
+                <div class="title" data-aos="fade-up">
+                    <h1>About Me</h1>
+                </div>
+    
+                <div class="row" data-aos="fade-in" data-aos-delas="1000">
+                    <div class="col left">
+                        <h1>Hey, there👊</h1>
+                        <h1>I'm Diki Muhamad A</h1>
 
-    <section class="skill">
-        <div class="container">
-            <div class="title">
-                <h1>Skill</h1>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="assets/image/logo/html.png" alt="">
-                        </div>
+                        <p>Aku adalah seorang Web Developer. Kegemaran
+                            ku terhadap dunia pemrograman di mulai pada saat aku masih sekolah SMK kelas 1. Pada saat itu
+                            aku sulit sekali untuk memahami dasar-dasar dari pemrograman di karena-kan maraknya virus
+                            Covid-19 pada waktu itu, namun disini aku tidak putus asa dan lebih memilih belajar web
+                            programing dengan tanpa bantuan guru sama sekali dan mengandalkan web/video tutorial yang ada.
+                        </p>
                     </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="assets/image/logo/css.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="assets/image/logo/js.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="assets/image/logo/php.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="assets/image/logo/scss.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="assets/image/logo/laravel.png" alt="">
+    
+                    <div class="col rigth">
+                        <div class="frame">
+                            <h2 class="title">diki <span>name</span></h2>
+                            <h2 class="country">ind <span>country</span></h2>
+                            <h2 class="age"><span>age</span></h2>
+                            <img src="assets/image/photo.png" alt="">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- <section class="contact">
-        <div class="container">
-            <div class="title">
-                <h1>Contact</h1>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <div class="card my-contact">
-                        <div class="card-body">
-                            <div class="info-group">
-                                <div class="logo">
-                                    <ion-icon name="location-outline"></ion-icon>
-                                </div>
-                                <div class="info">
-                                    <h1>Location:</h1>
-                                    <p>Dsn. Sukamukti RT/RW 08/05, Ds. Cigaleuh, Kec. Lemahsugih, Kab. Majalengka</p>
-                                </div>
-                            </div>
-
-                            <div class="info-group">
-                                <div class="logo">
-                                    <ion-icon name="mail-outline"></ion-icon>
-                                </div>
-                                <div class="info">
-                                    <h1>Email:</h1>
-                                    <p>dikimuhamad525@gmail.com</p>
-                                </div>
-                            </div>
-
-                            <div class="info-group">
-                                <div class="logo">
-                                    <ion-icon name="phone-portrait-outline"></ion-icon>
-                                </div>
-                                <div class="info">
-                                    <h1>Phone:</h1>
-                                    <p>(+62) 813-9556-4815</p>
-                                </div>
-                            </div>
-
-                            <div class="maps">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3960.0349603368595!2d108.23099477424456!3d-7.005166268612134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMDAnMTguNiJTIDEwOMKwMTQnMDAuOSJF!5e0!3m2!1sid!2sid!4v1689989692390!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    
+        <section class="skill">
+            <div class="container">
+                <div class="title" data-aos="fade-up">
+                    <h1>Skill</h1>
+                </div>
+    
+                <div class="row" data-aos="fade-in" data-aos-delas="1000">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="assets/image/logo/html.png" alt="">
                             </div>
                         </div>
-                    </div>
-
-                    <div class="card form-email">
-                        <div class="card-body">
-                            <form action="" method="POST">
-                                <div class="form-group">
-                                    <input type="text" name="nama" id="nama" required placeholder=" ">
-                                    <label for="nama">Nama</label>
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="email" name="email" id="email" required placeholder=" ">
-                                    <label for="email">Email</label>
-                                </div>
-
-                                <div class="form-group">
-                                    <textarea name="message" id="message" rows="20" required placeholder=" "></textarea>
-                                    <label for="message">Pesan</label>
-                                </div>
-
-                                <button type="submit">Kirim Pesan</button>
-                            </form>
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="assets/image/logo/css.png" alt="">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="assets/image/logo/js.png" alt="">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="assets/image/logo/php.png" alt="">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="assets/image/logo/scss.png" alt="">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="assets/image/logo/laravel.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section> -->
+        </section>
+    
+        <section class="contact">
+            <div class="container">
+                <div class="title" data-aos="fade-up">
+                    <h1>Contact</h1>
+                </div>
+    
+                <div class="row" data-aos="fade-in" data-aos-delas="1000">
+                    <div class="col">
+                        <div class="card my-contact">
+                            <div class="card-body">
+                                <div class="info-group">
+                                    <div class="logo">
+                                        <ion-icon name="location-outline"></ion-icon>
+                                    </div>
+                                    <div class="info">
+                                        <h1>Location:</h1>
+                                        <p>Dsn. Sukamukti RT/RW 08/05, Ds. Cigaleuh, Kec. Lemahsugih, Kab. Majalengka</p>
+                                    </div>
+                                </div>
+    
+                                <div class="info-group">
+                                    <div class="logo">
+                                        <ion-icon name="mail-outline"></ion-icon>
+                                    </div>
+                                    <div class="info">
+                                        <h1>Email:</h1>
+                                        <p>dikimuhamad525@gmail.com</p>
+                                    </div>
+                                </div>
+    
+                                <div class="info-group">
+                                    <div class="logo">
+                                        <ion-icon name="phone-portrait-outline"></ion-icon>
+                                    </div>
+                                    <div class="info">
+                                        <h1>Phone:</h1>
+                                        <p>(+62) 813-9556-4815</p>
+                                    </div>
+                                </div>
+    
+                                <div class="maps">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.0311555038033!2d108.22975757424449!3d-7.00561426861678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f375e71afa919%3A0xfafb623222fc1624!2sJl.%20Sukamukti%2C%20Cigaleuh%2C%20Kec.%20Lemahsugih%2C%20Kabupaten%20Majalengka%2C%20Jawa%20Barat%2045465!5e0!3m2!1sid!2sid!4v1690018975373!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card form-email">
+                            <div class="card-body">
+                                <form action="" method="POST">
+                                    <div class="form-group">
+                                        <input type="text" name="nama" id="nama" required placeholder=" ">
+                                        <label for="nama">Nama</label>
+                                    </div>
+    
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email" required placeholder=" ">
+                                        <label for="email">Email</label>
+                                    </div>
+    
+                                    <div class="form-group">
+                                        <textarea name="message" id="message" rows="20" required placeholder=" "></textarea>
+                                        <label for="message">Pesan</label>
+                                    </div>
+    
+                                    <button type="submit">Kirim Pesan</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <footer>
+            <div class="container">
+                <p>© 2023 Diki Muhamad Alfikri</p>
+            </div>
+        </footer>
+    </main>
 
-    <footer>
-        <div class="container">
-            <p>© 2023 Diki Muhamad Alfikri</p>
-        </div>
-    </footer>
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="assets/vendors/jquery/jquery.min.js"></script>
+<script src="assets/vendors/aos/aos.js"></script>
 <script src="assets/js/main.js"></script>
 </html>
