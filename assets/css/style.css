@@ -500,7 +500,7 @@ header button::after {
 }
 .contact .container .row .col .my-contact::before {
   content: "";
-  width: 500px;
+  width: 100%;
   height: 100%;
   position: absolute;
   z-index: 1;
@@ -600,7 +600,7 @@ header button::after {
 }
 .contact .container .row .col .form-email::before {
   content: "";
-  width: 600px;
+  width: 100%;
   height: 100%;
   position: absolute;
   z-index: 1;
@@ -611,6 +611,12 @@ header button::after {
 @media screen and (max-width: 600px) {
   .contact {
     padding: 20px !important;
+  }
+  .contact .container .row .col .card {
+    width: 100% !important;
+  }
+  .contact .container .row .col .card .card-body {
+    width: 100% !important;
   }
 }
 footer {
