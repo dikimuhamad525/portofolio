@@ -38,6 +38,42 @@
     });
 
     $(document).ready(function () {
+        var sections = $('section');
+        var navLinks = $('.navbar a');
+
+        navLinks.click(function (e) {
+            e.preventDefault();
+
+            var target = $(this).attr('href');
+            var targetPosition = $(target).offset().top;
+
+            $('html, body').animate({
+                scrollTop: targetPosition
+            }, 800);
+        });
+
+        $(window).scroll(function () {
+            var currentScroll = $(this).scrollTop();
+
+            var currentSection = sections.filter(function () {
+                return ($(this).offset().top - currentScroll) <= $(window).height() / 2;
+            }).last();
+
+            var activeSectionId = currentSection.attr('id');
+
+            navLinks.removeClass('active');
+
+            $('.navbar a[href="#' + activeSectionId + '"]').addClass('active');
+        });
+    });
+
+    $('.toggle-nav').click(function() {
+        $(this).toggleClass('toggle-active');
+        $('.navbar').toggleClass('nav-resp');
+        $('section').toggleClass('blur');
+    });
+
+    $(document).ready(function () {
         var date = new Date().getFullYear();
         var bd = 2004;
 

@@ -39,6 +39,7 @@
 body {
     position: relative;
     font-family: Roboto;
+    background: var(--color--004);
 }
 
 .loading {
@@ -47,7 +48,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color--004);
 
     $color: #8C6FF0;
     $colorRight: #5628EE;
@@ -201,36 +201,37 @@ header {
         }
     }
 
-    .icon-middle {
+    .toggle-nav {
+        display: none;
         font-size: 20px;
-        color: var(--color--003);
+        border: none;
+        outline: none;
+        color: var(--white);
+        background: transparent;
+        cursor: pointer;
+        transition: .2s ease;
+    }
+    
+    .toggle-active {
+        color: var(--color--001);
     }
 
-    button {
-        padding: 5px 10px;
-        position: relative;
-        border: none;
-        border-top: 1px solid var(--white--500);
-        border-bottom: 1px solid var(--white--500);
-        font-size: 12px;
-        text-transform: uppercase;
-        color: var(--color--003);
-        background: transparent;
+    .navbar {
+        gap: 20px;
+        display: flex;
+        list-style: none;
 
-        &::before {
-            content: "●";
-            position: absolute;
-            left: 0;
-            bottom: 6px;
-            color: var(--color--001);
-        }
+        li {
 
-        &::after {
-            content: "●";
-            position: absolute;
-            right: 0;
-            bottom: 6px;
-            color: var(--color--001);
+            a {
+                color: var(--white--800);
+                text-decoration: none;
+                transition: .2s ease;
+            }
+
+            .active {
+                color: var(--color--001);
+            }
         }
     }
 }
@@ -243,6 +244,41 @@ header {
 @media screen and (max-width: 600px) {
     header {
         padding: 20px !important;
+
+        .toggle-nav {
+            display: block !important;
+        }
+        
+        .navbar {
+            display: none;
+        }
+
+        .nav-resp {
+            height: 100%;
+            width: 50%;
+            padding: 20px;
+            display: block !important;
+            position: fixed;
+            top: 70px;
+            right: 0;
+            flex-direction: column;
+            background: var(--color--004);
+            animation: nav-fade .2s ease;
+    
+            li {
+                margin-bottom: 20px;
+            }
+
+            @keyframes nav-fade {
+                from {
+                    transform: translateX(50%);
+                }
+
+                to {
+                    transform: translateX(0);
+                }
+            }
+        }
     }
 }
 
@@ -370,6 +406,14 @@ header {
             }
         }
     }
+}
+
+section {
+    transition: .2s ease;
+}
+
+.blur {
+    filter: blur(5px) brightness(.8);
 }
 
 .about {
@@ -677,6 +721,7 @@ header {
 
 .contact {
     padding: 50px;
+    background: var(--white);
 
     .container {
 

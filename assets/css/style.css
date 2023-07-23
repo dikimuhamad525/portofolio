@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: Roboto;
   src: url(../font/Roboto-Regular.ttf);
@@ -39,6 +38,7 @@
 body {
   position: relative;
   font-family: Roboto;
+  background: var(--color--004);
 }
 
 .loading {
@@ -47,7 +47,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color--004);
 }
 .loading .infinityChrome {
   width: 128px;
@@ -166,33 +165,30 @@ header .logo h1 {
 header .logo h1 span {
   color: var(--color--001);
 }
-header .icon-middle {
+header .toggle-nav {
+  display: none;
   font-size: 20px;
-  color: var(--color--003);
-}
-header button {
-  padding: 5px 10px;
-  position: relative;
   border: none;
-  border-top: 1px solid var(--white--500);
-  border-bottom: 1px solid var(--white--500);
-  font-size: 12px;
-  text-transform: uppercase;
-  color: var(--color--003);
+  outline: none;
+  color: var(--white);
   background: transparent;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
-header button::before {
-  content: "●";
-  position: absolute;
-  left: 0;
-  bottom: 6px;
+header .toggle-active {
   color: var(--color--001);
 }
-header button::after {
-  content: "●";
-  position: absolute;
-  right: 0;
-  bottom: 6px;
+header .navbar {
+  gap: 20px;
+  display: flex;
+  list-style: none;
+}
+header .navbar li a {
+  color: var(--white--800);
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+header .navbar li .active {
   color: var(--color--001);
 }
 
@@ -204,6 +200,35 @@ header button::after {
 @media screen and (max-width: 600px) {
   header {
     padding: 20px !important;
+  }
+  header .toggle-nav {
+    display: block !important;
+  }
+  header .navbar {
+    display: none;
+  }
+  header .nav-resp {
+    height: 100%;
+    width: 50%;
+    padding: 20px;
+    display: block !important;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    background: var(--color--004);
+    animation: nav-fade 0.2s ease;
+  }
+  header .nav-resp li {
+    margin-bottom: 20px;
+  }
+  @keyframes nav-fade {
+    from {
+      transform: translateX(50%);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
 }
 .back-to-top {
@@ -305,6 +330,14 @@ header button::after {
     font-size: 25px !important;
   }
 }
+section {
+  transition: 0.2s ease;
+}
+
+.blur {
+  filter: blur(5px) brightness(0.8);
+}
+
 .about {
   padding: 50px;
   background: var(--white);
@@ -536,6 +569,7 @@ header button::after {
 }
 .contact {
   padding: 50px;
+  background: var(--white);
 }
 .contact .container .title {
   text-align: center;
