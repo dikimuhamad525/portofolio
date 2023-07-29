@@ -896,7 +896,8 @@ section {
                                     border: 1px solid var(--dark--200);
                                     border-radius: 5px;
                                     outline: none;
-                                    transition: .2s ease;
+                                    overflow: hidden;
+                                    transition: .2s ease-out;
 
                                     &:focus {
                                         border: 1px solid var(--color--001);
@@ -918,7 +919,9 @@ section {
                                 }
 
                                 input:focus~label,
-                                textarea:focus~label {
+                                input:not(:placeholder-shown)~label,
+                                textarea:focus~label,
+                                textarea:not(:placeholder-shown)~label {
                                     transform: translateY(-25px);
                                     color: var(--color--001);
                                     background: var(--white);
@@ -955,6 +958,28 @@ section {
                         z-index: 1;
                         background: var(--color--001);
                         border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .contact {
+
+        .container {
+
+            .row {
+
+                .col {
+
+                    .card {
+                        width: 600px;
+
+                        .card-body {
+                            width: 100%;
+                        }
                     }
                 }
             }

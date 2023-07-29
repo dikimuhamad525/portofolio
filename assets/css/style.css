@@ -722,7 +722,8 @@ section {
   border: 1px solid var(--dark--200);
   border-radius: 5px;
   outline: none;
-  transition: 0.2s ease;
+  overflow: hidden;
+  transition: 0.2s ease-out;
 }
 .contact .container .row .col .form-email .card-body form .form-group textarea:focus {
   border: 1px solid var(--color--001);
@@ -739,8 +740,16 @@ section {
   top: 15px;
   bottom: auto;
 }
+.contact .container .row .col .form-email .card-body form .form-group input:not(:-moz-placeholder-shown) ~ label, .contact .container .row .col .form-email .card-body form .form-group textarea:not(:-moz-placeholder-shown) ~ label {
+  transform: translateY(-25px);
+  color: var(--color--001);
+  background: var(--white);
+  padding: 0 5px;
+}
 .contact .container .row .col .form-email .card-body form .form-group input:focus ~ label,
-.contact .container .row .col .form-email .card-body form .form-group textarea:focus ~ label {
+.contact .container .row .col .form-email .card-body form .form-group input:not(:placeholder-shown) ~ label,
+.contact .container .row .col .form-email .card-body form .form-group textarea:focus ~ label,
+.contact .container .row .col .form-email .card-body form .form-group textarea:not(:placeholder-shown) ~ label {
   transform: translateY(-25px);
   color: var(--color--001);
   background: var(--white);
@@ -774,6 +783,14 @@ section {
   border-radius: 5px;
 }
 
+@media screen and (max-width: 1220px) {
+  .contact .container .row .col .card {
+    width: 600px;
+  }
+  .contact .container .row .col .card .card-body {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 600px) {
   .contact {
     padding: 20px !important;
